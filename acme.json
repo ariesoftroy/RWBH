@@ -1,0 +1,25 @@
+{
+	"select":"(*,hits,(data.(order_no,customer_info,product_items.(product_id,item_text),status,creation,_date,order_total,currency)))",
+	"_type":"order_search_result",
+	"count":1,
+	"start":0,
+	"hits":[{
+		"data":{
+			"order_no":"00000001",
+			"product_items":[{
+				"_type":"product_item",
+				"product_id":"test1234",
+				"item_text":"test"
+			}],
+			"_type":"order",
+			"creation_date":"2017-02-25T02:31Z",
+			"customer_info":{
+				"customer_no":"00006001",
+				"_type":"customer_info",
+				"customer_name":"pete_test",
+				"customer_id":"abeZMloJyUovapiXqHyioDsH",
+				"email":"test@gmail.com"
+			}
+		}
+	}]
+}

